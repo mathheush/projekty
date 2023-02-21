@@ -7,7 +7,7 @@ while (a > 0):
     x = a % 10
     y = (y * 10) + x
     a = a // 10
-
+ekdjbjeafbowebfwfie
 if e == y:
     print("liczba jest palimdromiczna")
 else:print("liczba nie jest palimdromiczna")
