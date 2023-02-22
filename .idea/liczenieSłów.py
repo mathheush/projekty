@@ -3,4 +3,5 @@ text = input("Wpisz tekst: ")
 
 new = text.split()
 
+
 print(len(new))
