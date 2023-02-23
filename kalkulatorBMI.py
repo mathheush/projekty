@@ -5,6 +5,7 @@ wiek = float(input("Wpisz wiek: "))
 if wiek < 18:
     print("Dla osób poniżej 18 roku życia nie oblicza się wskaźnika BMI.")
     exit()
+
 wzrost = float(input("Wpisz wzrost: "))
 waga = float(input("Wpisz wagę: "))
 
