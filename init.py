@@ -25,7 +25,7 @@ x = datetime.datetime.now()
 
 print(x.strftime("%X"))
 
-print(datetime.datetime.now())
+print(datetime.datetime.now(%))
 
 import math
 
