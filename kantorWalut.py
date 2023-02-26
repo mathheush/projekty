@@ -1,24 +1,28 @@
 import requests
 import json
 
-def akcja():
+def main():
 
-    print("Kantor")
+    print("Witaj w kantorze walut.\n")
 
-    x = input("Wpisz \"1\", jeśli chcesz sprzedać.\nWpisz \"2\", jeśli chcesz kupić.\nWpisz \"q\", aby zakończyć.\n")
+    x = input("Wpisz \"1\", jeśli chcesz sprzedać.\n"
+              "Wpisz \"2\", jeśli chcesz kupić.\n"
+              "Wpisz \"3\", jeśli chcesz zobaczyć aktualny kurs najpopularniejszych walut.\n"
+              "Wpisz \"q\", aby zakończyć.\n"
+              )
 
-    if x == "1":
+    if x == "1": #tutaj jest bid
         global do
         do = "sprzedać"
-        kasa()
-        currency()
-        print(bid)
 
     elif x == "2":
         do = "kupić"
         kasa()
         currency()
         print(ask)
+
+    elif x == "3":
+        pass
 
     elif x == "q":
         pass
@@ -28,9 +32,6 @@ def akcja():
 def currency():
     global waluta
     global link
-    global y
-    global kurs
-    global o
     global bid
     global ask
     waluta = input("Podaj walutę:\n")
@@ -41,13 +42,9 @@ def currency():
     bid = (link["bid"])
     ask = (link["ask"])
 
-
-
-
-
-
 def kasa():
     global money
     money = input(f"Ile chcesz {do}?: ")
-akcja()
+
+main()
 
