@@ -11,7 +11,7 @@ def welcome():
               "Co chcesz zrobić?: "
               )
     if x == "1":
-        pass
+        sell()
 
     elif x == "2":
         pass
@@ -42,4 +42,14 @@ def currency():
         print(currency_id,"     ", bid,"      ",  ask )
     print("")
     welcome()
+
+def sell():
+    amount = input("Ile chcesz sprzedać PLN:")
+    if amount == "q":
+        welcome()
+    else:
+        try: int(amount)
+        except: print("Podaj prawidłową ilość lub wpisz \"q\" aby wrócić."), sell()
+        else: pass
+    #tutaj skonczylem
 welcome()
