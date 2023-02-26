@@ -2,9 +2,10 @@ while True:
     operation = input("Wybierz operację (+, -, *, /), lub wpisz 'q' aby zakończyć: ")
 
     if operation == 'q':
-
-    num1 = float(input("Podaj pierwszą liczbę: "))
-    num2 = float(input("Podaj drugą liczbę: "))
+        quit()
+    else:
+        num1 = float(input("Podaj pierwszą liczbę: "))
+        num2 = float(input("Podaj drugą liczbę: "))
 
 
     if operation == '+':

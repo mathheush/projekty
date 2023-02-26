@@ -9,6 +9,7 @@ def akcja():
         do = "sprzedać"
         kasa()
         currency()
+        print(bid)
 
     elif x == "2":
         do = "kupić"
@@ -23,14 +24,16 @@ def currency():
     global link
     global y
     global kurs
+    global o
+    global bid
+    global ask
     waluta = input("Podaj walutę:\n")
     link = requests.get(f'http://api.nbp.pl/api/exchangerates/rates/c/{waluta}/2023-02-24/?format=json')
-
-    def jprint(obj):
-        text = json.dumps(obj, sort_keys=True, indent=4)
-        print(text)
-
-    jprint(link.json())
+    link = link.json()
+    link = (link["rates"])
+    link = (link[0])
+    bid = (link["bid"])
+    ask = (link["ask"])
 
 
 
