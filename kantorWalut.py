@@ -2,8 +2,11 @@ import requests
 import json
 
 def akcja():
+
     print("Kantor")
+
     x = input("Wpisz \"1\", jeśli chcesz sprzedać.\nWpisz \"2\", jeśli chcesz kupić.\nWpisz \"q\", aby zakończyć.\n")
+
     if x == "1":
         global do
         do = "sprzedać"
@@ -15,8 +18,11 @@ def akcja():
         do = "kupić"
         kasa()
         currency()
+        print(ask)
+
     elif x == "q":
         pass
+
     else: print("Nieznana operacja."), akcja()
 
 def currency():
