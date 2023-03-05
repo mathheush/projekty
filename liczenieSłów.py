@@ -5,4 +5,5 @@ text = text.replace(",","").replace(".","").replace("?","").replace("!","").repl
 
 new = text.split()
 
+
 print(len(new))
